@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Lyudmila Feldman](https://up.htmlacademy.ru/htmlcss-individual/1/user/1759997).
-* Наставник: `Неизвестно`.
+* Наставник: `Дмитрий Осадченко (https://htmlacademy.ru/profile/dimaos)`.
 
 ---
 
