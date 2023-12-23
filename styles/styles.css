@@ -187,6 +187,8 @@ body {
 .hero-welcome {
   display: block;
   margin: 0 auto;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 .page-title {
@@ -629,6 +631,10 @@ body {
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
   border: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
 }
 
 .subscription-button {
@@ -667,7 +673,11 @@ body {
   align-items: center;
 }
 
-.footer-social-item {
+.social-button {
+  display: block;
+}
+
+.social-button img{
   display: block;
 }
 
