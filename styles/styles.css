@@ -72,6 +72,7 @@ body {
 .navigation-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -80,6 +81,7 @@ body {
 .navigation-menu {
   display: flex;
   align-items: center;
+  width: 460px;
 }
 
 .navigation-menu .navigation-link {
@@ -92,12 +94,15 @@ body {
   display: flex;
   align-items: center;
   margin-left: auto;
+  max-width: 270px;
 }
 
 .navigation-user .navigation-link {
   display: flex;
   padding: 22px 12px;
   justify-content: center;
+  min-width: 44px;
+  min-height: 64px;
 }
 
 .navigation-link {
@@ -189,6 +194,8 @@ body {
   margin: 0 auto;
   padding-top: 51px;
   padding-bottom: 82px;
+  max-width: 100%;
+  height: auto;
 }
 
 .page-title {
@@ -198,7 +205,8 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   width: 650px;
-  margin: 0 auto;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .page-subtitle {
@@ -206,6 +214,11 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0;
+}
+
+.page-title-advantages {
+  margin-bottom: 25px;
 }
 
 .advantages-list {
@@ -356,6 +369,7 @@ body {
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #2b2533;
+  padding: 35px 70px 70px 70px;
 }
 
 .inner-header-title {
@@ -364,6 +378,7 @@ body {
   font-weight: 700;
   line-height: 78px;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .catalog-filter {
@@ -407,10 +422,12 @@ body {
 }
 
 .breadcrumbs {
+  display: flex;
   margin: 0;
   padding: 0;
   color: #ffffff;
   list-style-type: none;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -418,6 +435,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
+  margin-right: 10px;
 }
 
 .catalog {
@@ -464,6 +482,8 @@ body {
   width: 292px;
   padding: 14px 20px;
   margin-left: 70px;
+  border-radius: 4px;
+  border: 2px solid var(--Forms-elements-1, #E5E5E5);
 }
 
 .hotel-list {
@@ -602,6 +622,7 @@ body {
 
 .subscription .page-subtitle {
   color: #ffffff;
+  margin-bottom: 54px;
 }
 
 .subscription-simple {
@@ -652,7 +673,7 @@ body {
   justify-content: center;
   align-items: center;
   border: none;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
 }
 
 .page-footer-container {
@@ -669,6 +690,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   width: 180px;
   align-items: center;
 }
