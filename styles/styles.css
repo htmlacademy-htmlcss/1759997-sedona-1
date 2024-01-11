@@ -135,6 +135,7 @@ body {
   padding: 8px 16px;
   border-radius: 4px;
   border: none;
+  min-width: 140px;
 }
 
 .button-large {
@@ -146,7 +147,6 @@ body {
 .button-secondary {
   color: #ffffff;
   background-color: #82b3d3;
-  padding: 8px 50px;
 }
 
 .button-transparent {
@@ -488,28 +488,34 @@ body {
 }
 
 .hotel-list {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
-  flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style-type: none;
 }
 
 .hotel-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 212px 1fr;
+  gap: 16px 20px;
   border: 1px solid #e6e6e6;
-  width: 340px;
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #e6e6e6;
   padding: 20px;
 }
 
-.hotel-card-link {
+.hotel-link-image {
   text-decoration: none;
+  grid-column: 1 / -1;
+}
+
+.hotel-link-title {
+  text-decoration: none;
+  grid-column: 1 / -1;
 }
 
 .hotel-card-title {
@@ -518,15 +524,15 @@ body {
   font-weight: 700;
   line-height: 28px;
   color: #000000;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .hotel-card-type {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
-  color: #333333;
+  margin: 0;
+  padding: 0;
 }
 
 .hotel-card-price {
@@ -534,12 +540,38 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: #333333;
+  margin: 0;
+  padding: 0;
   text-align: right;
 }
 
 .star-rating {
-  background-image: url("../images/rating-star.svg");
-  background-repeat: no-repeat;
+  width: 106px;
+  min-height: 17px;
+  align-self: center;
+  background-image: url(../images/rating-star.svg);
+  background-repeat: space;
+  background-size: 18px 17px;
+}
+
+.star-rating-1 {
+  width: 18px;
+}
+
+.star-rating-2 {
+  width: 40px;
+}
+
+.star-rating-3 {
+  width: 62px;
+}
+
+.star-rating-4 {
+  width: 84px;
+}
+
+.star-rating-5 {
+  width: 106px;
 }
 
 .hotel-card-rating {
@@ -549,6 +581,12 @@ body {
   text-transform: uppercase;
   color: #333333;
   background-color: #f2f2f2;
+  margin: 0;
+  min-width: 140px;
+  min-height: 37px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 9px 22px 8px 23px;
 }
 
 .pagination {
@@ -602,6 +640,7 @@ body {
   min-width: 60px;
   height: 60px;
 }
+
 .subscription {
   background-image: url("../images/subscribe-background.jpg");
   background-size: 100% 100%;
