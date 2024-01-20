@@ -106,12 +106,62 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+}
+
+.navigation-link-current::after {
+  position: absolute;
+  content: "";
+  right: 16px;
+  left: 16px;
+  bottom: 0;
+  height: 2px;
+  background-color: #756257;
+}
+
+.navigation-link-favorites::before{
+  position: absolute;
+  content: "";
+  bottom: 35px;
+  right: 8px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #7db54f;
+}
+
+.navigation-link-favorites::after{
+  position: absolute;
+  content: "12";
+  text-align: center;
+  font-family: PT Sans;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px;
+  color: #ffffff;
+  bottom: 40px;
+  right: 10px;
+  left: 25px;
+  width: 11px;
+  height: 10px;
+  background-color: transparent;
+}
+
+.navigation-icon:hover path {
+  fill: #756157;
+}
+
+.navigation-icon:active path {
+  fill: #756157;
+  fill-opacity: 0.3;
 }
 
 .navigation-logo {
@@ -137,6 +187,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
+  box-sizing: border-box;
   color: #ffffff;
   background-color: #756157;
   text-transform: uppercase;
@@ -147,6 +198,20 @@ body {
   border: none;
   min-width: 140px;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #615048;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #756157;
+}
+
+.button:disabled {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #e5e5e5;
 }
 
 .button-large {
@@ -160,10 +225,35 @@ body {
   background-color: #82b3d3;
 }
 
+.button-secondary:hover {
+  background-color: #68a2ca;
+}
+
+.button-secondary:active {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #82b3d3;
+}
+
 .button-transparent {
   color: #ffffff;
   background-color: transparent;
   border: none;
+}
+
+.button-transparent:hover {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: transparent;
+}
+
+.button-transparent:active {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: transparent;
+}
+
+.button-transparent:disabled {
+  color: #ffffff;
+  background-color: transparent;
+  opacity: 0.1;
 }
 
 .button-tertiary {
@@ -171,8 +261,18 @@ body {
   background-color: #7db54f;
 }
 
+.button-tertiary:hover {
+  background-color: #6c9e42;
+}
+
+.button-tertiary:active {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #7db54f;
+}
+
 .button-sort {
   display: flex;
+  box-sizing: border-box;
   width: 48px;
   height: 48px;
   padding: 14px 12px;
@@ -184,6 +284,11 @@ body {
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   cursor: pointer;
+}
+
+.button-sort:hover,
+.button-sort:active  {
+  border-color: #000000;
 }
 
 .button-current {
@@ -283,6 +388,7 @@ body {
 }
 
 .advantages-item-title {
+  position: relative;
   margin: 0;
   margin-bottom: 62px;
   font-size: 24px;
@@ -292,8 +398,23 @@ body {
   color: #000000;
 }
 
+.advantages-item-title::after {
+  position: absolute;
+  content: "";
+  bottom: -30px;
+  right: 85px;
+  left: 85px;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
 .advantages-item-extended .advantages-item-title {
   color: #ffffff;
+}
+
+.advantages-item-extended .advantages-item-title::after {
+  background-color: rgba(255, 255, 255, 0.30);
 }
 
 .advantages-description {
@@ -303,6 +424,7 @@ body {
 }
 
 .advantages-img {
+  display: block;
   width: 800px;
   min-height: 385px;
 }
@@ -345,10 +467,28 @@ body {
 .services-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   width: 400px;
   min-height: 385px;
   padding: 80px 85px;
+}
+
+.services-icon {
+  background-repeat: no-repeat;
+  background-position: 50% 80px;
+  background-size: 75px 72px;
+}
+
+.services-icon-house {
+  background-image: url("../images/services-icon-1.svg");
+}
+
+.services-icon-food {
+  background-image: url("../images/services-icon-2.svg");
+}
+
+.services-icon-souvenirs {
+  background-image: url("../images/services-icon-3.svg");
 }
 
 .services-item-title {
@@ -364,6 +504,7 @@ body {
 
 .services-description {
   margin: 0;
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
@@ -455,12 +596,34 @@ body {
   margin-bottom: 40px;
 }
 
+.breadcrumbs-item {
+  background-image: url(../images/breadscrums-arrow.svg);
+  background-repeat: no-repeat;
+
+}
+
 .breadcrumbs-link {
   color: inherit;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   margin-right: 10px;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.30);
+}
+
+.breadscrums-link-icon:hover path {
+  fill: rgba(255, 255, 255, 0.60);
+}
+
+.breadscrums-link-icon:active path {
+  fill: rgba(255, 255, 255, 0.30);
 }
 
 .catalog {
@@ -512,6 +675,19 @@ body {
   border: 2px solid #e5e5e5;
 }
 
+.select-control:hover {
+  border-color: #68a2ca;
+}
+
+.select-control:focus {
+  border-color: #3f5e72;
+}
+
+.select-control:disabled {
+  color: rgba(0, 0, 0, 0.30);
+  border-color: rgba(0, 0, 0, 0.30);
+}
+
 .hotel-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
@@ -536,6 +712,10 @@ body {
 .hotel-link-image {
   text-decoration: none;
   grid-column: 1 / -1;
+}
+
+.hotel-card-image {
+  display: block;
 }
 
 .hotel-link-title {
@@ -648,6 +828,16 @@ body {
   height: 60px;
 }
 
+.pagination-link[href]:hover {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-link[href]:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.30);
+}
+
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
@@ -728,6 +918,7 @@ body {
 
 .subscription-button {
   color: #ffffff;
+  box-sizing: border-box;
   background-color: #82b3d3;
   text-align: center;
   font-size: 20px;
@@ -742,6 +933,15 @@ body {
   align-items: center;
   border: none;
   border-radius: 0 4px 4px 0;
+}
+
+.subscription-button:hover {
+  background-color: #68a2ca;
+}
+
+.subscription-button:active {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #82b3d3;
 }
 
 .page-footer-container {
@@ -759,16 +959,38 @@ body {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  width: 180px;
+  max-width: 180px;
   align-items: center;
+  justify-content: center;
 }
 
-.social-button {
-  display: block;
+.footer-social-item {
+  position: relative;
+  width: 47px;
+  max-height: 40px;
 }
 
-.social-button img{
+.footer-social-link {
+  position: relative;
   display: block;
+  padding: 0 10px;
+}
+
+.footer-social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-social-icon:hover path {
+  fill: #68a2ca;
+}
+
+.footer-social-icon:active path {
+  fill: #68a2ca;
+  fill-opacity: 0.3;
 }
 
 .footer-phone-number {
@@ -783,4 +1005,25 @@ body {
   padding: 5px 194px 5px 195px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.footer-phone-number:hover {
+  color: #756157;
+}
+
+.footer-phone-number:active {
+  color: rgba(117, 97, 87, 0.30);
+}
+
+.footer-developer-icon {
+  display: block;
+}
+
+.footer-developer-icon:hover path{
+  fill: #756157;
+}
+
+.footer-developer-icon:active path {
+  fill: #756157;
+  fill-opacity: 0.3;
 }
