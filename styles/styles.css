@@ -115,12 +115,20 @@ body {
   text-decoration: none;
 }
 
+.navigation-link[href]:hover {
+  color: #756157;
+}
+
+.navigation-link[href]:active {
+  color: rgba(117, 97, 87, 0.30);
+}
+
 .navigation-link-current::after {
   position: absolute;
   content: "";
   right: 16px;
   left: 16px;
-  bottom: 0;
+  bottom: -1px;
   height: 2px;
   background-color: #756257;
 }
@@ -557,6 +565,14 @@ body {
   list-style-type: none;
 }
 
+.catalog-filter-item:hover {
+  opacity: 0.6;
+}
+
+.catalog-filter-item:active {
+  opacity: 0.3;
+}
+
 .catalog-filter-title {
   font-size: 20px;
   font-weight: 700;
@@ -578,9 +594,16 @@ body {
   line-height: 24px;
 }
 
+.range-slifer-input:hover {
+  background-color: #e6e6e6;
+}
+
 .control-text {
+  font-size: 18px;
   text-align: right;
   font-weight: 400;
+  color: #000000;
+  opacity: 0.3;
 }
 
 .control-input-cost {
@@ -596,18 +619,21 @@ body {
   margin-bottom: 40px;
 }
 
-.breadcrumbs-item {
+.breadcrumbs-item:not(:last-child) {
   background-image: url(../images/breadscrums-arrow.svg);
   background-repeat: no-repeat;
-
+  background-position: center right;
+  padding-right: 18px;
 }
 
 .breadcrumbs-link {
+  display: inline-flex;
+  justify-content: center;
   color: inherit;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .breadcrumbs-link:hover {
@@ -909,11 +935,23 @@ body {
   color: #000000;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
+  border-color: #f2f2f2;
   border: none;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  padding: 12px 20px;
+  padding: 10px 20px;
+}
+
+.field:hover {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.field:focus{
+  background-color: #f2f2f2;
+  border-color: #000000;
+  color: #000000;
 }
 
 .subscription-button {
@@ -964,24 +1002,12 @@ body {
   justify-content: center;
 }
 
-.footer-social-item {
-  position: relative;
-  width: 47px;
-  max-height: 40px;
-}
-
 .footer-social-link {
-  position: relative;
-  display: block;
-  padding: 0 10px;
-}
-
-.footer-social-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 40px;
 }
 
 .footer-social-icon:hover path {
