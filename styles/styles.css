@@ -133,21 +133,11 @@ body {
   background-color: #756257;
 }
 
-.navigation-link-favorites::before{
+.navigation-link-favorites-qty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  content: "";
-  bottom: 35px;
-  right: 8px;
-  left: 20px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #7db54f;
-}
-
-.navigation-link-favorites::after{
-  position: absolute;
-  content: "12";
   text-align: center;
   font-family: PT Sans;
   font-size: 10px;
@@ -155,12 +145,13 @@ body {
   font-weight: 400;
   line-height: 10px;
   color: #ffffff;
-  bottom: 40px;
-  right: 10px;
-  left: 25px;
-  width: 11px;
-  height: 10px;
-  background-color: transparent;
+  bottom: 35px;
+  left: 20px;
+  min-width: 20px;
+  height: 20px;
+  padding: 5px;
+  background-color: #7db54f;
+  border-radius: 10px;
 }
 
 .navigation-icon:hover path {
@@ -410,8 +401,8 @@ body {
   position: absolute;
   content: "";
   bottom: -30px;
-  right: 85px;
-  left: 85px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.30);
