@@ -38,6 +38,7 @@
                   <path d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z" fill="black"/>
                 </svg>
                 <span class="visually-hidden">Избранное</span>
+                <span class="navigation-link-favorites-qty">12</span>
               </a>
             </li>
             <li class="navigation-item">
@@ -195,9 +196,83 @@
               </svg>
             </a>
           </div>
-
         </div>
       </footer>
+
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-search">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+
+              <p class="field-group field-group-dates">
+                <label class="modal-label" for="check-in-date">Дата заезда:</label>
+                <input class="field-extended" id="check-in-date" type="text" name="check-in-date" placeholder="27 апреля 2020">
+                <span class="modal-text search-error">Мы не можем отправить вас в прошлое.</span>
+              </p>
+
+              <p class="field-group field-group-dates">
+                <label class="modal-label" for="check-out-date">Дата выезда:</label>
+                <input class="field-extended" id="check-out-date" type="text" name="check-out-date" placeholder="1 сентября 2023">
+                <span class="modal-text">На эти даты есть свободные номера. Пока есть.</span>
+              </p>
+
+                <div class="modal-choice">
+
+                <p class="field-group field-group-choice">
+                  <label class="modal-label" for="adults">Взрослые:</label>
+                  <input class="modal-choice-field" id="adults" name="adults" type="number" value="2">
+                  <button type="button" class="choice-guests-button modal-minus">
+                    <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="choice-guests-button modal-plus">
+                    <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                </p>
+
+                <p class="field-group field-group-choice field-group-choice-extended">
+                  <span class="modal-label modal-label-icon">
+                    <label class="modal-label" for="children">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                        <svg class="tooltip-icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/>
+                        </svg>
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                      </span>
+                    </span>
+                  </span>
+                  <input class="modal-choice-field" id="children" name="children" type="number" value="2">
+                  <button type="button" class="choice-guests-button modal-minus">
+                    <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="choice-guests-button modal-plus">
+                    <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+                    </svg>
+                  </button>
+                </p>
+
+              </div>
+
+              <button class="button button-secondary modal-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
+
     </div>
+
   </body>
 </html>
