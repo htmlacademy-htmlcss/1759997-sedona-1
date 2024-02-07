@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>Главная страница: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <div class="container">
+
       <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo">
@@ -17,7 +19,7 @@
               <a class="navigation-link navigation-link-current">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">О седоне</a>
+              <a class="navigation-link" href="#">О Cедоне</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -76,20 +78,20 @@
             </li>
             <li class="advantages-item">
               <div class="advantages-text">
-                <h3 class="advantages-item-title">Красивая дорога</h3>
+                <h3 class="advantages-item-title">Красивая <br> дорога</h3>
                 <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-text">
-                <h3 class="advantages-item-title">Мало туристов</h3>
+                <h3 class="advantages-item-title">Мало <br> туристов</h3>
                 <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-extended">
               <img class="advantages-img" src="images/advantages-2.jpg" width="800" height="385" alt="Мост Дьявола">
               <div class="advantages-text">
-                <h3 class="advantages-item-title">Там есть мост дьявола</h3>
+                <h3 class="advantages-item-title">Там есть <br> мост дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -135,7 +137,7 @@
             <p class="page-subtitle">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="subscription-email">Email</label>
-              <input class="field"  placeholder="Ваш email" type="email" name="subscription-email" id="subscription-email" required>
+              <input class="field" type="email" id="subscription-email" name="subscription-email" placeholder="Ваш e-mail" required>
               <button class="button subscription-button" type="submit">Подписаться</button>
             </form>
           </div>
@@ -201,42 +203,37 @@
 
       <div class="modal-container modal-container-close">
         <div class="modal modal-search">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
             <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-
               <p class="field-group field-group-dates">
                 <label class="modal-label" for="check-in-date">Дата заезда:</label>
-                <input class="field-extended" id="check-in-date" type="text" name="check-in-date" placeholder="27 апреля 2020">
+                <input class="field-extended" type="text" id="check-in-date" name="check-in-date" placeholder="27 апреля 2020">
                 <span class="modal-text search-error">Мы не можем отправить вас в прошлое.</span>
               </p>
-
               <p class="field-group field-group-dates">
                 <label class="modal-label" for="check-out-date">Дата выезда:</label>
-                <input class="field-extended" id="check-out-date" type="text" name="check-out-date" placeholder="1 сентября 2023">
+                <input class="field-extended" type="text" id="check-out-date" name="check-out-date" placeholder="1 сентября 2023">
                 <span class="modal-text">На эти даты есть свободные номера. Пока есть.</span>
               </p>
-
-                <div class="modal-choice">
-
+              <div class="modal-choice">
                 <p class="field-group field-group-choice">
                   <label class="modal-label" for="adults">Взрослые:</label>
-                  <input class="modal-choice-field" id="adults" name="adults" type="number" value="2">
-                  <button type="button" class="choice-guests-button modal-minus">
+                  <input class="modal-choice-field" type="number" id="adults" name="adults" value="2">
+                  <button class="choice-guests-button modal-minus" type="button">
                     <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
                       <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
                     </svg>
                   </button>
-                  <button type="button" class="choice-guests-button modal-plus">
+                  <button class="choice-guests-button modal-plus" type="button">
                     <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                       <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
                     </svg>
                   </button>
                 </p>
-
                 <p class="field-group field-group-choice field-group-choice-extended">
                   <span class="modal-label modal-label-icon">
                     <label class="modal-label" for="children">Дети:</label>
@@ -251,28 +248,24 @@
                       </span>
                     </span>
                   </span>
-                  <input class="modal-choice-field" id="children" name="children" type="number" value="2">
-                  <button type="button" class="choice-guests-button modal-minus">
+                  <input class="modal-choice-field" type="number" id="children" name="children" value="2">
+                  <button class="choice-guests-button modal-minus" type="button">
                     <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
                       <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
                     </svg>
                   </button>
-                  <button type="button" class="choice-guests-button modal-plus">
+                  <button class="choice-guests-button modal-plus" type="button">
                     <svg class="modal-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                       <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
                     </svg>
                   </button>
                 </p>
-
               </div>
-
               <button class="button button-secondary modal-button" type="submit">Найти</button>
             </form>
           </section>
         </div>
       </div>
-
     </div>
-
   </body>
 </html>
