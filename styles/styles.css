@@ -630,6 +630,8 @@ body {
 .control-mark-checkbox {
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   background-color: #ffffff;
@@ -639,6 +641,8 @@ body {
 .control-mark-radio {
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   background-color: #ffffff;
